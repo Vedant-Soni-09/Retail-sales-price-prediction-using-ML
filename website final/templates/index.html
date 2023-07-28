@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>My Website</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#Home-page">
+            <h1><span>R</span>etail <span>P</span>rice <span>P</span>rediction</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#Home-page" data-after="Home">Home</a></li>
+            <li><a href="#projects" data-after="Skills">Predictions</a></li>
+            <li><a href="#skills" data-after="Projects">Inside</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Home-page Section  -->
+  <section id="Home-page">
+    <div class="Home-page container">
+      <div class="homepage-img">
+        <img class="profilepic" src="homepagepic.jpg" alt="" />
+      </div>
+      <div class="homepage-text">
+        <h1>Welcome <span></span></h1>
+        <h1>To Retail Price Prediction <span></span></h1>
+        <h1 class="welcome">SKYROCKET YOUR SALES <span></span></h1>
+
+        <a href="projects container" type="button" class="cta">Let's Go!</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Home-page Section  -->
+
+
+
+  <!-- Projects Section -->
+  <section id="projects">
+
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Make Your <span>Prediction</span></h1>
+        <form>
+
+          <input placeholder="Enter Fuel Price in Rupees" type="text" required="">
+          <input placeholder="Enter Tempertaure" type="text" required="">
+          <input placeholder="Enter Outlet size in sq metres" type="text" required="">
+          <!-- <button>Submit</button> -->
+        </form>
+        <button type="button" onclick="show()" id="btnID">
+          Submit
+        </button>
+
+        <script>
+          function show() {
+
+
+            document.getElementById('data')
+              .style.display = "block";
+            document.getElementById('data2')
+              .style.display = "block";
+
+
+          }
+        </script>
+        
+
+
+
+        <div style="background-color: #a166ab">
+
+          <img id="data" src="graph2.jpg" style="display: none;" />
+          <img id="data2" src="graph.jpg" style="display: none;" />
+
+
+
+        </div>
+
+
+        <button id="Predict" type="button" style="margin-top: 40px; margin-left: 30px;"
+          class="Click-here">Predict</button>
+        <div class="custom-model-main">
+          <div class="custom-model-inner">
+            <div class="close-btn">×</div>
+            <div class="custom-model-wrap">
+              <div class="pop-up-content-wrap">
+                <h2 style="color:white">Prediction is: </h2>
+                <p style="color: white;">This Day You should sell your goods 10% higher than wholesale.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-overlay"></div>
+        </div>
+        <!-- jQuery -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script>
+          $(".Click-here").on('click', function () {
+            $(".custom-model-main").addClass('model-open');
+          });
+          $(".close-btn, .bg-overlay").click(function () {
+            $(".custom-model-main").removeClass('model-open');
+          });
+        </script>
+
+
+
+
+  </section>
+  <!-- End Projects Section -->
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="skills container">
+      <div class="skills-top">
+        <h1 class="section-title"><span>M</span>ade <span>W</span>ith</h1>
+        <p>
+          This is done with help of
+        </p>
+      </div>
+      <div class="skills-bottom">
+        <div class="skills-item">
+          <h2>Programming</h2>
+          <div class="skills-img">
+            <a href="www.google.com">
+              <img src="programming.jpg" />
+            </a>
+          </div>
+        </div>
+        <div class="skills-item">
+          <h2>Web Design</h2>
+          <div class="skills-img">
+            <img src="webdesign.jpg" />
+          </div>
+        </div>
+        <div class="skills-item">
+          <h2>Machine Learning</h2>
+          <div class="skills-img">
+            <img src="ml.jpg" />
+          </div>
+        </div>
+        <div class="skills-item">
+          <h2>Artificial Intelligence</h2>
+          <div class="skills-img">
+            <img src="personal.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Skills Section -->
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="woman.png" alt="img" />
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About <span>Project</span></h1>
+        <h2>Developer <span>VEDANT</span></h2>
+        <p>
+          Predicting retail prices of things is something that both businesses and customers are interested in. The
+          price of a product at a certain target outlet is often related to the pricing of the same or similar products
+          at neighboring competing outlets in a competitive setting.
+        </p>
+        <a href="https://docs.google.com/presentation/d/1uxmkXziiqeLxhHLgQOdDyXAtQDrWugKs/edit" class="cta">See How!</a>
+      </div>
+    </div>
+  </section>
+  <!-- End About Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div>
+        <h1 class="section-title">Contact <span>info</span></h1>
+      </div>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="icon">
+            <img src="https://img.icons8.com/bubbles/100/000000/phone.png" />
+          </div>
+          <div class="contact-info">
+            <h1>Phone</h1>
+            <h2>+91 XXXXXXXXX</h2>
+            <h2>+91 XXXXXXXXX</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">
+            <img src="https://img.icons8.com/bubbles/100/000000/new-post.png" />
+          </div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>Vedant.com</h2>
+            <h2>6624.com</h2>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon">
+            <img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" />
+          </div>
+          <div class="contact-info">
+            <h1>Address</h1>
+            <h2>Chandigarh University<br />Chandigarh</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>R</span>etail <span>P</span>rice <span>P</span>rediciton</h1>
+      </div>
+      <h2>SKYROCKET YOUR SALES</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+        </div>
+      </div>
+      <p>Copyright © 2022 VEDANT. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script>
+
+    const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+    const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+    const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+    const header = document.querySelector('.header.container');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobile_menu.classList.toggle('active');
+    });
+
+    document.addEventListener('scroll', () => {
+      var scroll_position = window.scrollY;
+      if (scroll_position > 250) {
+        header.style.backgroundColor = '#29323c';
+      } else {
+        header.style.backgroundColor = 'transparent';
+      }
+    });
+
+    menu_item.forEach((item) => {
+      item.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobile_menu.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
